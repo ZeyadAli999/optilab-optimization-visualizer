@@ -1,5 +1,40 @@
 # OptiLab - Course-Aligned Optimization Visualizer
 
+> **Frontend engineering + numerical algorithms | React, TypeScript, Plotly, Vitest**
+>
+> An interactive educational tool for exploring optimization methods, inspecting intermediate steps and comparing algorithms. The application implements course-aligned numerical methods; it does **not** claim to be a general-purpose symbolic optimization solver.
+
+## Engineering snapshot
+
+| Area | Design and implementation |
+| --- | --- |
+| **Algorithm layer** | Linear programming, Newton's method, interval search, gradient methods, Lagrange multipliers, KKT and penalty-method demonstrations |
+| **Visualization** | React UI with Plotly charts and KaTeX math rendering |
+| **Model/UI separation** | Numerical methods live in `src/domain/algorithms.ts`; examples and presentation contracts are separated from the UI |
+| **Comparative analysis** | Compare Two / Compare All screens, examples tied to lecture notation, plus a separately labelled ACO bonus |
+| **Validation** | Vitest tests and a TypeScript-checked production build available through npm scripts |
+
+### Code map
+
+- [Numerical methods](src/domain/algorithms.ts) and [algorithm regression tests](src/domain/algorithms.test.ts)
+- [Course presets and examples](src/domain/courseData.ts)
+- [Comparison logic](src/domain/comparison.ts)
+- [ACO bonus algorithm](src/domain/aco.ts)
+- [React application](src/App.tsx) and [styles](src/styles.css)
+
+### Reproduce locally
+
+```bash
+npm ci
+npm test
+npm run build
+npm run dev
+```
+
+**Design constraints:** 2D LP visualizations are bounded by the educational method; several constrained optimization views sample a grid and are approximate. Plotly adds significant bundle weight. No claim of production numerical-library accuracy or current test results is made without a fresh run.
+
+---
+
 OptiLab is an interactive React + TypeScript dashboard for the uploaded optimization course files. The app is organized to follow the professor's lecture flow and uses course-style notation, examples, formulas, and viva wording wherever the source material provides them.
 
 ## How To Run
