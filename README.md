@@ -1,5 +1,7 @@
 # OptiLab - Course-Aligned Optimization Visualizer
 
+[![Frontend checks](https://github.com/ZeyadAli999/optilab-optimization-visualizer/actions/workflows/ci.yml/badge.svg)](https://github.com/ZeyadAli999/optilab-optimization-visualizer/actions/workflows/ci.yml)
+
 > **Frontend engineering + numerical algorithms | React, TypeScript, Plotly, Vitest**
 >
 > An interactive educational tool for exploring optimization methods, inspecting intermediate steps and comparing algorithms. The application implements course-aligned numerical methods; it does **not** claim to be a general-purpose symbolic optimization solver.
